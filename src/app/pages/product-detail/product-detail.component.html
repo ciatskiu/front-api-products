@@ -1,0 +1,20 @@
+<form [formGroup]="form_cadastrar" (ngSubmit)="submitForm()">
+  <h3>Cadastro de Produtos</h3>
+  <mat-form-field class="example-full-width" appearance="fill" >
+    <mat-label>Nome</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Preço</mat-label>
+    <input matInput type="number" formControlName="price">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Quantidade</mat-label>
+    <input matInput type="number" formControlName="quantity">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Salvar Alterações</button>
+
+</form>

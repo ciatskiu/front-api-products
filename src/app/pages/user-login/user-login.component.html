@@ -1,0 +1,17 @@
+<form [formGroup]="form_login" (ngSubmit)="submitForm()">
+<mat-form-field appearance="fill">
+  <mat-label>Insira seu Email</mat-label>
+  <input matInput placeholder="example@example.com" formControlName="email" required>
+</mat-form-field>
+<br />
+<mat-form-field appearance="fill">
+  <mat-label>Insira sua Senha</mat-label>
+  <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  </button>
+</mat-form-field>
+<br />
+<button mat-raised-button color="primary" type="submit">Entrar</button>
+</form>
+<a (click)="goToRegister()">Não tem cadastro? Clique aqui!</a>

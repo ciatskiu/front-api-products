@@ -1,0 +1,33 @@
+<h3>Api de Cadastro de Produtos</h3>
+<form [formGroup]="form_cadastrar" (ngSubmit)="submitForm()">
+  <mat-form-field class="example-full-width" appearance="fill" >
+    <mat-label>Nome</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Preço</mat-label>
+    <input matInput type="number" formControlName="price">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Quantidade</mat-label>
+    <input matInput type="number" formControlName="quantity">
+  </mat-form-field>
+  <button mat-raised-button type="submit">Cadastrar</button>
+</form>
+
+
+<div class="content">
+<mat-card *ngFor="let product of this.products">
+  <mat-card-title-group>
+    <mat-card-title>Nome: {{product.name}}</mat-card-title>
+  </mat-card-title-group>
+  <mat-card-content>
+    <p>Preço: {{product.price}}</p>
+    <p>Quantidade: {{product.quantity}}</p>
+    <button mat-raised-button (click)="editar(product)">Editar</button>
+    <button class="perigo" mat-raised-button (click)="excluir(product)">Excluir</button>
+  </mat-card-content>
+</mat-card>
+</div>

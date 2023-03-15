@@ -1,0 +1,24 @@
+h3{
+  font-size: 25pt;
+  margin-left: 4px;
+}
+
+.content{
+ display: inline-flex;
+}
+
+mat-card{
+  width: 300px;
+  margin-left: 4px;
+}
+
+.mat-raised-button{
+  background-color: darkcyan;
+  color: white;
+  width: 120px;
+  margin-left: 4px;
+}
+
+.perigo{
+  background-color: red;
+}
